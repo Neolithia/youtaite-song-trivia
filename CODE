@@ -1,0 +1,32 @@
+import pygame
+pygame.init
+BLACK = (0, 0, 0)  # set colours
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+PINK = (255, 192, 203)
+VIOLET = (138, 43, 226)
+ORANGE = (255, 165, 0)
+YELLOW = (255, 255, 0)
+BLUE = (30, 144, 255)
+size = (700, 500)  # screen size/resolution
+screen = pygame.display.set_mode(size)  # set the screen size
+pygame.display.set_caption('YouTaite Song Trivia')  # set window title
+done = False
+clock = pygame.time.Clock()
+while not done:  # main program loop
+    for event in pygame.event.get():  # user did something
+        if event.type == pygame.QUIT:  # if user pressed 'exit'
+            done = True  # program closes
+for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+        print("User Asked to QUIT")
+    elif event.type == pygame.KEYDOWN:
+        print("User Pressed A Key")
+    elif event.type == pygame.KEYUP:
+        print("User Released A Key")
+    elif event.type == pygame.MOUSEBUTTONDOWN:
+        print ("User pressed a mouse button")
+
+
+screen.fill(WHITE)
